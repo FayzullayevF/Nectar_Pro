@@ -16,7 +16,7 @@ class SignUpView extends StatelessWidget {
     return ChangeNotifierProvider(
       create:
           (context) =>
-              SignUpViewModel(repo: SignUpRepository(client: ApiClient())),
+              SignUpViewModel(repo: AuthRepository(client: ApiClient())),
       builder: (context, index) {
         final vm = context.read<SignUpViewModel>();
         return Scaffold(
