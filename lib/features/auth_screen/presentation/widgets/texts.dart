@@ -8,7 +8,11 @@ class TextsMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500),
+      style: TextStyle(
+        fontSize: 26,
+        fontWeight: FontWeight.w600,
+        fontFamily: "Gilroy",
+      ),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:nectar/core/client.dart';
 import 'package:nectar/features/auth_screen/data/repositories_impl/auth_repository.dart';
 import 'package:nectar/features/auth_screen/presentation/blocs/sign_up_view_model.dart';
@@ -45,7 +46,8 @@ class SignUpView extends StatelessWidget {
                   SignUpFormfield(text: "Password", controller: vm.passwordController, hindText: "Password"),
                   SizedBox(height: 20,),
                   ElevatedButton(onPressed: (){
-                    vm.register(vm.emailController.text, vm.passwordController.text, vm.usernameController.text);
+                    context.go("/");
+                    vm.register(vm.emailController.text, vm.passwordController.text, vm.usernameController.text );
                   }, child: Text("Sign up"),)
                 ],
               ),

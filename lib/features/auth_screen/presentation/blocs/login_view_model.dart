@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nectar/features/auth_screen/data/repositories_impl/auth_repository.dart';
 
 class LoginViewModel extends ChangeNotifier {
-  LoginViewModel({required AuthRepository repo}) : _repo = repo {
-    load();
-  }
+  LoginViewModel({required AuthRepository repo}) : _repo = repo;
 
   final AuthRepository _repo;
   final emailController = TextEditingController();

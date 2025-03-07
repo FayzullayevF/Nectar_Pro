@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nectar/core/utils/colors.dart';
 
-class SignUpFormfield extends StatelessWidget {
-  const SignUpFormfield({
+class LoginTextfield extends StatelessWidget {
+  const LoginTextfield({
     super.key,
     required this.text,
     required this.controller,
@@ -31,6 +31,10 @@ class SignUpFormfield extends StatelessWidget {
         TextFormField(
           controller: controller,
           decoration: InputDecoration(
+            suffixIcon: IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset("assets/icons/hide.svg"),
+            ),
             hintText: hindText,
             labelStyle: TextStyle(color: Colors.white),
             hintStyle: TextStyle(fontSize: 18),
